@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e -o pipefail
+
+wabt_source=~/co/github.com/WebAssembly/wabt/
+
+basedir=$(cd "$(dirname "$0")" && pwd -P)
+cd "$basedir"
+
+build_wabt() {
+    cd "$basedir"
+    mkdir -p .wabt 
+    cd .wabt
+    cmake "$wabt_source/"
+    make -j 8
+}
+
+build_wabt
+echo "WABT built into .wabt/"
