@@ -1,3 +1,4 @@
+;; page 15: Function body in S-expr prefix notation
 (module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     (i32.add

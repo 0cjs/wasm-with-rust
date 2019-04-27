@@ -1,3 +1,5 @@
+;; page 14: Function body in RPN notation
+
 (module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     get_local $lhs
